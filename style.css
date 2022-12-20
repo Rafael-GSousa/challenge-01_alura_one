@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+}
+/*container com todas as 3 divs formando 3 colunas*/
+.container {
+    position: absolute;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: #000000;
+}
+
+.logo {
+    position: relative;
+    margin: 40px 0 0 40px;
+    width: 120px;
+    height: 48px;
+    background-color: aqua;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.central {
+    background: blue;
+    margin: 0;
+}
+.central input {
+    margin: 168px 0 0 240px;
+    border: none;
+    background: #e8e8e8; 
+    width: 680px;
+    height: 48px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.central ::-webkit-input-placeholder {
+    color: #0A3871;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.aviso-botoes {
+    background: yellow;
+    margin: 851px 0 0 240px;
+    width: 680px;
+    height: 103px;
+}
+
+.aviso-botoes p {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+
+.aviso-botoes button {
+    width: 328px;
+    border-radius: 20px;
+
+}
+
+.botoes {
+    background: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 67px;
+}
+
+#criptografar {
+    background: #0A3871;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+#descriptografar {
+    background: #D8DFE8;
+    font-size: 18px;
+}
+
+.final {
+    background: red;
+    margin: 40px 0 0 1000px;
+}

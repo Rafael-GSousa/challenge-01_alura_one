@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="decode.css">
+  </head>
+  <body>
+    <header class="c-header">
+      <img src="img/logo-alura.png" alt="">
+    </header>
+
+    <main class="container-general">
+      <section class="container-general__data-entry">
+        <textarea name="text" cols="30" rows="10" class="container-general__input-area" id="input-area">Digite seu texto</textarea>
+        <section class="container-general__information-area">
+          <span class="iconify container-general__information-area__icon" data-icon="ion:information-circle"></span>
+          <p class="container-general__information-area__text">Apenas letras minúsculas e sem acentos</p>
+        </section>
+        <section class="container-general__service-buttons">
+          <button class="container-general__service-buttons__encrypts" id="button-encrypt">
+            Criptografar
+          </button>
+          <button class="container-general__service-buttons__decrypts" id="button-decrypt">
+            Descriptografar
+          </button>
+        </section>
+      </section>
+      <section class="container-general__data-output">
+        <div class="container-general__output-area" id="output-area">
+          <div class="container-general__center-area" id="hide-area">
+            <img class="container-general__output-area__image-search" src="img/boneco.png" alt="pessoa sentada com uma lupa olhando para um diamante">
+          </div>
+          <h2 class="container-general__output-area__title-empty-area" id="hide-area2">
+            Nenhuma mensagem encontrada
+          </h2>
+          <p class="container-general__output-area__area-receiving-output" id="output-area-text">
+            Digite um texto que você queira criptografar ou descriptografar.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container-dev">
+        <span class="iconify footer__container-dev__icon" data-icon="akar-icons:github-fill"></span>
+        <a href="https://github.com/rafael-gsousa" class="footer__container-dev__link" target="_blank">Developed by Rafael Sousa</a>
+      </div>
+    </footer>
+
+    <script src="decode.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  </body>
+</html>

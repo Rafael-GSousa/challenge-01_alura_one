@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F3F5FC;
+  font-family: 'Inter', sans-serif;
+}
+
+.container-general__data-entry{
+  text-align: center;
+}
+
+.c-header {
+  margin: 40px 0 0 40px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  animation-duration: 3s;
+  animation-name: slip;
+}
+
+.c-header__icon {
+  margin-left: 1rem;
+  font-size: 4rem;
+  color:#4C9971;
+}
+
+.c-header__title-app {
+  color:#4C9971;
+  font-size: 2rem;
+}
+
+.container-general__input-area {
+  width: 330px;
+  height: 328px;
+  margin-top: 5rem;
+  resize: none;
+  color: #0A3871;
+  font-size: 2rem;
+  background: none;
+  font-weight: 200px;
+  border: none;
+}
+
+.container-general__information-area {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.container-general__information-area__icon {
+  font-size: 1.4rem;
+  color: #4C9971;
+}
+
+.container-general__information-area__text {
+  font-size: 0.8rem;
+  color: #343A40;
+}
+
+.container-general__service-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 680px;
+  background: #0A3871;
+  margin-left: 8%;
+}
+
+.container-general__service-buttons__encrypts,
+.container-general__service-buttons__decrypts {
+  margin: 0.5rem;
+  height: 4rem;
+  width: 20rem;
+  border-radius: 1rem;
+  font-weight: 100px;
+}
+
+.container-general__service-buttons__encrypts {
+  border: none;
+  background: linear-gradient(to right, #264D39 50%, #4C9971 50%);
+  background-position: right bottom;
+  transition: all 300ms ease-out;
+  background-size: 200% 100%;
+  color: #fff;
+}
+
+.container-general__service-buttons__encrypts:hover {
+  background-position: left bottom;
+}
+
+.container-general__service-buttons__decrypts {
+  background: none;
+  border: 1px solid #264D39;
+  background: linear-gradient(to right, #264D39 50%, transparent 50%);
+  background-position: right bottom;
+  transition: all 300ms ease-out;
+  background-size: 200% 100%;
+  color: #264D39;
+}
+
+.container-general__service-buttons__decrypts:hover {
+  background-position: left bottom;
+  color: #fff;
+}
+
+.container-general__output-area {
+  margin: -48px 40px -50px 0;
+  background: #000000;
+  border-radius: 1rem;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  color: #343A40;
+}
+
+.container-general__output-area__title-empty-area {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 400px;
+}
+
+.container-general__center-area {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.footer__container-dev {
+  display: flex;
+  align-items: center;
+}
+
+.footer__container-dev__icon {
+  margin-right: 0.5rem;
+  color: #4C9971;
+}
+
+.footer__container-dev__link {
+  color: #0A3871;
+}
+
+/*Animação de Deslizar o ícone e titulo no Header*/
+@keyframes slip {
+  from {
+    margin-left: -20%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/*Responsividade para tablets*/
+@media (min-width: 482px) and (max-width: 767px) {
+
+  .container-general__data-entry {
+    text-align: left;
+  }
+
+  .container-general__input-area {
+    width: 440px;
+    height: 400px;
+    margin-left: 1rem;
+  }
+}
+
+/*Responsividade para telas pequenas, laptops*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-general__data-entry {
+    text-align: left;
+  }
+
+  .container-general__input-area {
+    width: 700px;
+    height: 400px;
+    margin-left: 1rem;
+  }
+}
+
+/*Responsividade para telas grandes */
+@media (min-width: 1025px) {
+
+  .container-general__center-area {
+    display: inline;
+    text-align: center;
+  }
+
+  .container-general__output-area__image-search {
+    width: 14rem;
+  }
+
+  .container-general__output-area {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container-general__data-entry {
+    text-align: left;
+  }
+
+  .container-general__input-area {
+    width: 700px;
+    height: 400px;
+    margin-left: 4rem;
+  }
+
+  .container-general {
+    display: flex;
+  }
+
+  .container-general__information-area {
+    margin-left: 4rem;
+  }
+
+  .container-general__service-buttons__encrypts,
+  .container-general__service-buttons__decrypts {
+    margin: 1rem;
+    height: 3rem;
+    width: 16rem;
+    border-radius: 1rem;
+    font-weight: 100px;
+  }
+}
