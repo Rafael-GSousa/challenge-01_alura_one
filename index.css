@@ -12,7 +12,6 @@ body {
     align-items: flex-start;
     padding: 0px;
     gap: 40px;
-    background: #0A3871;
 }
 
 .container-logo img {
@@ -42,7 +41,6 @@ body {
     align-items: center;
     padding: 0px;
     gap: 8px;
-    color: blue;
 }
 .alert p {
     position: absolute;
@@ -50,7 +48,6 @@ body {
     height: 18px;
     left: 240px;
     top: 595px;
-    background: blueviolet;
 }
 
 .buttons-c-d {
@@ -65,7 +62,6 @@ body {
     left: 240px;
     top: 628px;
     transform: rotate(0.06deg);
-background: yellow;
 }
 
 #criptografar {
@@ -139,8 +135,8 @@ background: yellow;
 .section-output {
     position: absolute;
     width: 400px;
-    height: 944px;
-    left: 1000px;
+    height: 700px;
+    left: 926px;
     top: 40px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -150,72 +146,82 @@ background: yellow;
 .boneco {
     position: absolute;
     width: 336px;
-    height: 304px;
-    margin: 243px 32px 397px 32px;
+    height: 232px;
+    margin: 171px 32px 0 32px;
+}
+
+.boneco img {
+    width: 336px;
+    height: 232px;
 }
 
 .boneco-base {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
     gap: 16px;
 
     position: absolute;
     width: 336px;
     height: 122px;
-    margin: 579px 32px 243px 32px;
+    margin: 507px 32px 0 32px;
+
 }
 
 .boneco-base h2 {
     width: 336px;
-height: 58px;
+    height: 58px;
 
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 120%;
-/* or 29px */
-
-text-align: center;
-
-/* Gray/gray-500 */
-
-color: #343A40;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
 }
+
 .boneco-base p {
     width: 336px;
-height: 48px;
-
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 150%;
-/* or 24px */
-
-text-align: center;
-
-color: #495057;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
+    height: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
 
 
-footer {
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 1366px;
+    height: 60px;
+    top: 750px;
+    padding-top: 10px;
     background: lightblue;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 456px;
+    height: 60px;
+}
+.contatos i {
+    padding-top: 5px;
 }
