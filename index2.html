@@ -16,25 +16,30 @@
     </head>
    
     <body>
-       
         <!--Cabeçalho onde vai o ícone da Alura-->
-        <div class="container-logo">
-            <img src="img/logo-alura.png" alt="logotipo da Alura">
-        </div>
-
-    
+        <header>    
+            <div class="container-logo">
+                <h1><img src="img/logo-alura.png" alt="logotipo da Alura"></h1>
+            </div>
+        </header>
         <!--Estrutura principal onde serão criadas a seção de input e a seção do output-->
         <!--Será criada uma seção dentro da seção input para os botões e o alerta-->
+            
+        <main>
             <!--Criando a seção input e adicionando o textarea-->
-
-        <textarea name="" id="input-text" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+            <section class="input">
+                <div class="textarea-input">
+                    <textarea name="" id="input-text" cols="30" rows="10" placeholder="Digite seu texto"></textarea>
+                </div>
+            </section>
+            
 
                 <!--Criando a subseção do input e adicionando o ícone com alerta e os botões-->
 
-                <div class="alert">
+                <section class="alert">
                     <p><i class="fa-solid fa-circle-exclamation"></i>
                     Apenas letras minúsculas e sem acento.</p>
-                </div>
+                </section>
                 <!--Criando a div com os botões de critografar e descriptografar-->
                 <div class="buttons-c-d">
                     <button id="criptografar"><p>Criptografar</p></button>
@@ -56,8 +61,8 @@
                     </div>
                 
             </div>
-    
-        
+        </main>
+        <footer>
             <div class="footer">
                 <p>Developed by Rafael Sousa</p>
                 <div class="contatos">
@@ -68,7 +73,7 @@
                 </div>
                 
             </div>
-        
+        </footer>
 
     </body>
 
