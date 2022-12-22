@@ -1,22 +1,25 @@
+header{
+    width: 100%;
+}
 .header {
-    text-align: left;
+    width: 100%; /*largura do header de 100%*/
+    margin: 40px 0 0 40px; /*margem de 40 pixels para cima e para a esquerda*/
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     animation-duration: 2s;
     animation-name: slip;
 }
 
 .logo-alura {
-    margin-left: 1rem;
-    font-size: 4rem;
-    color: #4C9971;
+    color: #0A3871;
 }
-
+/*
 .title-alura {
     font-size: 2rem;
     color: #4C9971;
 }
-
+*/
 @keyframes slip {
    /* from {
       margin-left: -20%;
@@ -30,18 +33,27 @@
     }
     25% {
         top: 50px !important; 
-        background: LawnGreen; 
+        background: aquamarine; 
     }
     50% {
         top: 100px !important; 
-        background: LightGreen ; 
+        background: lightblue ; 
     }
     100% {
         top: 200px !important; 
         color: white; 
-        background: Green; 
+        background: blue; 
         width: 400px;
     }
+}
+
+.container-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
 }
 
 .section-input {

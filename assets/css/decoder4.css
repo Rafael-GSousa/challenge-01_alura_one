@@ -1,0 +1,307 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #BBBBBB;
+}
+/* CSS do header */
+header {
+
+    padding: 2rem 0 0 2rem;
+
+}
+
+.caixa {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 2rem;
+    height: 3rem;
+
+    /*background: white;*/
+}
+
+.logo-alura {
+    width: 2rem;
+    height: 3rem;
+    
+}
+
+/* CSS do main */
+/*section input*/
+.container-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 33rem;
+    position: relative;
+
+    /* background: yellow;*/
+}
+
+.section-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 8%;
+
+    /* background: pink; */
+}
+
+.textarea {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    margin: 2rem 0 0 0;
+
+    /* background: #343A40; */
+} 
+
+.input-texto {
+    color: darkblue;
+    width: 100%;
+    height: 80%;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.container-alert-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 30%;
+
+/*    background: navy; */
+
+}
+
+.container-alert {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 0.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 3rem;
+
+/*    background: turquoise; */
+
+}
+
+.container-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+    position: relative;
+
+    /*  background: purple; */
+    
+
+}
+
+.encrypt, .decrypt {
+    height: 100%;
+    width: 49.5%;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.encrypt {
+    border: none;
+    background: linear-gradient(to right, #264D39 50%, #4C9971 50%);
+    background-position: right bottom;
+    transition: all 300ms ease-out;
+    background-size: 200% 100%;
+    color: #ffffff;
+}
+
+.encrypt:hover {
+    background-position: left bottom;
+}
+
+.decrypt {
+    background: none;
+    border: 1px solid #264D39;
+    background: linear-gradient(to right, #264D39 50%, transparent 50%);
+    background-position: right bottom;
+    transition: all 300ms ease-out;
+    background-size: 200% 100%;
+    color: #264D39;
+}
+
+.decrypt:hover {
+    background-position: left bottom;
+    color: #ffffff;
+}
+
+
+/*section output*/
+
+.section-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 50%;
+    height: 110%;
+    margin: 0 3% 4% 3%;
+    border-radius: 1rem;
+    background: #ffffff;
+}
+
+.section-output-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 25%;
+}
+
+.output-titulo {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.output-texto {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  /*  background: gray; */
+    width: 100%;
+    height: 2.3rem;
+    padding-top: 0.5rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+
+.footer a { 
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.footer strong {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-logo {
+    display: flex;
+    position: relative;
+    margin: 3rem 0 0 3rem;
+    width: 10%;
+    background: blue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0 6rem;
+    background: red;
+}
+
+
+.input-text-area {
+    width: 100%;
+    height: 30;
+    
+}
+.alerta-botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: green;
+}
+
+.alerta {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: #343A40;
+
+
+    background: pink;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*
+.encrypt, .decrypt {
+    margin: 0.5rem;
+    height: 4rem;
+    width: 20rem;
+    border-radius: 1rem;
+    font-weight: 100px;
+}
+
+.encrypt {
+
+}
+
+.decrypt {
+
+}
