@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <script src="https://kit.fontawesome.com/5e2938b66a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
-    <link rel="stylesheet" href="./assets/css/decoder4.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-</head>
-<body>
-    <header>
-        <div class="caixa">
-            <img src="./img/logo-alura.png" alt="logotipo da alura" class="logo-alura">
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decoder</title>
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <script src="https://kit.fontawesome.com/5e2938b66a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+        <link rel="stylesheet" href="./assets/css/decoder4.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
+    </head>
+    <body>
 
-    <main class="container-main">
-        <section class="section-input">
-            <div class="textarea">
-                <textarea cols="70" rows="10" id="mensagem" class="input-texto" placeholder="Digite seu texto aqui"></textarea>
+        <header>
+            <div class="caixa">
+                <img src="./img/logo-alura.png" alt="logotipo da alura" class="logo-alura">
             </div>
+        </header>
 
-            <div class="container-alert-buttons">
-                <div class="container-alert">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <span class="subsection-input-alert-text">Apenas letras minúsculas e sem acento.</span>
+        <main class="container-main">
+        
+            <section class="section-input">
+        
+                <div class="textarea">
+                    <textarea cols="70" rows="10" id="mensagem" class="input-texto" placeholder="Digite seu texto aqui"></textarea>
                 </div>
-                <div class="container-buttons">
-                    <button class="encrypt">Criptografar</button>
-                    <button class="decrypt">Descriptografar</button>
+
+                <div class="container-alert-buttons">
+        
+                    <div class="container-alert">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span class="subsection-input-alert-text">Apenas letras minúsculas e sem acento.</span>
+                    </div>
+        
+                    <div class="container-buttons">
+                        <button class="encrypt">Criptografar</button>
+                        <button class="decrypt">Descriptografar</button>
+                    </div>
+        
                 </div>
+        
+            </section>
+
+            <section class="section-output">
+        
+                <div class="section-output-in">
+        
+                    <div class="boneco">
+                        <img src="img/boneco.png" alt="imagem de uma pessoa com lupa">
+                    </div>
+        
+                    <h2 class="output-titulo">Nenhuma mensagem encontrada</h2>
+                    <p class="output-texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        
+                </div>   
+        
+            </section>
+        
+        </main>
+
+        <footer>
+        
+            <div class="footer">
+        
+                <p class="footer-dev">Developed by <span class="footer-dev-name">Rafael Sousa</span></p>
+        
+                <div class="icons">
+                    <a href="https://github.com/rafael-gsousa" target="_blank"><i class="fa-brands fa-github"></i> <span class="text-icons">rafael-gsousa</span></a>
+                    <a href="https://www.linkedin.com/in/rafael-gsousa" target="_blank"><i class="fa-brands fa-linkedin"></i> <span class="text-icons">rafael-gsousa</span></a>
+                    <a href="https://instagram.com/raphael_galdino" target="_blank"><i class="fa-brands fa-instagram"></i> <span class="text-icons">raphael_galdino</span></a>
+                    <a href="mailto:rafael.gsousa@outlook.com"><i class="fa-solid fa-envelope"></i> <span class="text-icons">rafael.gsousa@outlook.com</span></a>
+                </div>
+        
             </div>
-        </section>
-
-        <section class="section-output">
-            <div class="section-output-in">
-                <div class="boneco">
-                    <img src="img/boneco.png" alt="imagem de uma pessoa com lupa">
-                </div>
-                <h2 class="output-titulo">Nenhuma mensagem encontrada</h2>
-                <p class="output-texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
-            </div>   
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer">
-            <p>Developed by <strong>Rafael Sousa</strong></p>
-            <div class="icons">
-                <a href="https://github.com/rafael-gsousa" target="_blank"><i class="fa-brands fa-github"></i> <span>rafael-gsousa</span></a>
-                <a href="www.linkedin.com/in/rafael-gsousa" target="_blank"><i class="fa-brands fa-linkedin"></i> <span>rafael-gsousa</span></a>
-                <a href="https://instagram.com/raphael_galdino" target="_blank"><i class="fa-brands fa-instagram"></i> <span>raphael_galdino</span></a>
-                <a href="mailto:rafael.gsousa@outlook.com"><i class="fa-solid fa-envelope"></i> <span>rafael.gsousa@outlook.com</span></a>
-            </div>
-        </div>
-    </footer>
-</body>
+        
+        </footer>
+        
+    </body>
 </html>
