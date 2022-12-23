@@ -5,7 +5,7 @@
       text-align: left;
     }
   
-    .input-text {
+    .textarea {
       width: 440px;
       height: 400px;
       margin-left: 1rem;
@@ -18,7 +18,7 @@
       text-align: left;
     }
   
-    .input-text {
+    .textarea {
       width: 700px;
       height: 400px;
       margin-left: 1rem;
@@ -49,7 +49,7 @@
       text-align: left;
     }
   
-    .input-text {
+    .textarea {
       width: 700px;
       height: 400px;
       margin-left: 4rem;
@@ -59,12 +59,11 @@
       display: flex;
     }
   
-    .subsection-input-alert {
+    .container-alert-buttons {
       margin-left: 4rem;
     }
   
-    .container-buttons-encrypt,
-    .container-buttons-decrypt {
+    .encrypt, .decrypt {
       margin: 1rem;
       height: 3rem;
       width: 16rem;
