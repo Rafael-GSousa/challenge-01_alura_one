@@ -31,12 +31,15 @@ encryptButton.onclick = () => {
   output.style.justifyContent = 'start'
 
   outputText.innerHTML = arrayListEncrypt.join('')
+
+  output.innerHTML = '<textarea readonly id="output-text">' + outputText.innerHTML + 
+  '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
   
 }
 
 decryptButton.onclick = () => {
   const inputText = document.getElementById('input-text').value
-  const outputArea = document.getElementById('output')
+  const output = document.getElementById('output')
   const outputAreaText = document.getElementById('output-text')
   const hideImage = document.getElementById('hide-image')
   const hideTitle = document.getElementById('hide-title')
@@ -49,7 +52,19 @@ decryptButton.onclick = () => {
 
   hideImage.style.display = 'none'
   hideTitle.style.display = 'none'
-  outputArea.style.justifyContent = 'start'
+  output.style.justifyContent = 'start'
 
   outputAreaText.innerHTML = decrypt
+
+  output.innerHTML = '<textarea readonly id="output-text">' + outputAreaText.innerHTML + 
+    '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+
+}
+
+function copiar() {
+    var textoCop = document.getElementById('input-texto');
+  
+    textoCop.select();
+    document.execCommand('copy');
+    alert("Texto copiado.");
 }
