@@ -3,80 +3,64 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Decoder</title>
+        <title>Decoder Alura</title>
         <link rel="stylesheet" href="./assets/css/reset.css">
-        <script src="https://kit.fontawesome.com/5e2938b66a.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
         <link rel="stylesheet" href="./assets/css/decoder.css">
-        <!--<link rel="stylesheet" href="./assets/css/responsive.css">-->
+        <link rel="stylesheet" href="./assets/css/responsive.css">
     </head>
     <body>
 
-        <header>
-            <div class="caixa">
-                <img src="./img/logo-alura.png" alt="logotipo da alura" class="logo-alura">
-            </div>
+        <header class="caixa">
+        
+            <img src="./assets/img/logo-alura.png" alt="logotipo da alura" class="logo-alura">
+            <h1 class="title-logo">Alura</h1>
+        
         </header>
 
         <main class="container-main">
-        
-            <section class="section-input">
-        
-                <div class="textarea">
-                    <textarea cols="70" rows="10" id="mensagem" class="input-texto" id="input-area" placeholder="Digite seu texto aqui"></textarea>
-                </div>
-
-                <div class="container-alert-buttons">
-        
-                    <div class="container-alert">
-                        <i class="fa-solid fa-circle-exclamation"></i>
-                        <span class="subsection-input-alert-text">Apenas letras minúsculas e sem acento.</span>
-                    </div>
-        
-                    <div class="container-buttons">
-                        <button class="encrypt" id="button-encrypt">Criptografar</button>
-                        <button class="decrypt" id="button-decrypt">Descriptografar</button>
-                    </div>
-        
-                </div>
-        
-            </section>
-
-            <section class="section-output">
-        
-                <div class="section-output-in" id="output-area">
-        
-                    <div class="boneco" id="hide-area">
-                        <img src="img/travolta.gif" alt="imagem de uma pessoa com lupa">
-                    </div>
-        
-                    <h2 class="output-titulo" id="hide-area2">Nenhuma mensagem encontrada</h2>
-                    <p class="output-texto" id="output-area-text">Digite um texto que você deseja criptografar ou descriptografar.</p>
-        
-                </div>   
-        
-            </section>
-        
+                <!--Área da esquerda-->
+                <section class="section-input">
+                <textarea name="text" cols="30" rows="10" class="input-texto" id="input-text" placeholder="Digite seu texto aqui"></textarea>
+                        <section class="container-information">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span class="subsection-input-alert-text">Apenas letras minúsculas e sem acento.</span>
+                        </section>
+            
+                        <section class="container-buttons">
+                            <button class="encrypt" id="encrypt-button">Criptografar</button>
+                            <button class="decrypt" id="decrypt-button">Descriptografar</button>
+                        </section>
+                </section>
+                <!--Área da direita-->
+                <section class="section-output">
+                    <div class="section-output-in" id="output">
+                        <div class="boneco" id="hide-image">
+                            <img src="./assets/img/travolta.gif" alt="John Travolta perdido" class="output-image">
+                        </div>        
+                        <h2 class="output-titulo" id="hide-title">Nenhuma mensagem encontrada</h2>
+                        <p class="output-texto" id="output-text">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    </div>       
+                </section>
+       
         </main>
 
-        <footer>
-        
-            <div class="footer">
-        
+        <footer class="footer">
+                
+                <div class="container-dev">
                 <p class="footer-dev">Developed by <span class="footer-dev-name">Rafael Sousa</span></p>
         
-                <div class="contacts">
-                    <a href="https://github.com/rafael-gsousa" target="_blank"><i class="fa-brands fa-github"></i> <span class="text-icons">rafael-gsousa</span></a>
-                    <a href="https://www.linkedin.com/in/rafael-gsousa" target="_blank"><i class="fa-brands fa-linkedin"></i> <span class="text-icons">rafael-gsousa</span></a>
-                    <a href="https://instagram.com/raphael_galdino" target="_blank"><i class="fa-brands fa-instagram"></i> <span class="text-icons">raphael_galdino</span></a>
-                    <a href="mailto:rafael.gsousa@outlook.com"><i class="fa-solid fa-envelope"></i> <span class="text-icons">rafael.gsousa@outlook.com</span></a>
+                
+                    <a href="https://github.com/rafael-gsousa" target="_blank"><i class="fa-brands fa-github"></i> <span class="text-icons"></span></a>
+                    <a href="https://www.linkedin.com/in/rafael-gsousa" target="_blank"><i class="fa-brands fa-linkedin"></i> <span class="text-icons"></span></a>
+                    <a href="https://instagram.com/raphael_galdino" target="_blank"><i class="fa-brands fa-instagram"></i> <span class="text-icons"></span></a>
+                    <a href="mailto:rafael.gsousa@outlook.com"><i class="fa-solid fa-envelope"></i> <span class="text-icons"></span></a>
                 </div>
-        
-            </div>
         
         </footer>
 
-        <script src="./assets/js/decoder.js"></script>
+    <script src="./assets/js/decoder.js"></script>
+    <script src="https://kit.fontawesome.com/5e2938b66a.js" crossorigin="anonymous"></script>
 
     </body>
 </html>

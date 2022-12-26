@@ -1,73 +1,73 @@
 /*Responsividade para tablets*/
 @media (min-width: 482px) and (max-width: 767px) {
 
-    .section-input {
-      text-align: left;
-    }
-  
-    .textarea {
-      width: 440px;
-      height: 400px;
-      margin-left: 1rem;
-    }
+  .section-input {
+    text-align: left;
   }
-  
-  /*Responsividade para telas pequenas, laptops*/
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .section-input {
-      text-align: left;
-    }
-  
-    .textarea {
-      width: 700px;
-      height: 400px;
-      margin-left: 1rem;
-    }
+
+  .input-texto {
+    width: 440px;
+    height: 400px;
+    margin-left: 1rem;
   }
-  
-  /*Responsividade para telas grandes */
-  @media (min-width: 1025px) {
-  
-    .section-output-center {
-      display: inline;
-      text-align: center;
-    }
-  
-    .section-output-center-image {
-      width: 14rem;
-    }
-  
-    .section-output-in {
-      height: 100%;
-      width: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  
-    .section-input {
-      text-align: left;
-    }
-  
-    .textarea {
-      width: 700px;
-      height: 400px;
-      margin-left: 4rem;
-    }
-  
-    .container-main {
-      display: flex;
-    }
-  
-    .container-alert-buttons {
-      margin-left: 4rem;
-    }
-  
-    .encrypt, .decrypt {
-      margin: 1rem;
-      height: 3rem;
-      width: 16rem;
-      border-radius: 1rem;
-      font-weight: 100px;
-    }
+}
+
+/*Responsividade para telas pequenas, laptops*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-input {
+    text-align: left;
   }
+
+  .input-texto {
+    width: 700px;
+    height: 400px;
+    margin-left: 1rem;
+  }
+}
+
+/*Responsividade para telas grandes */
+@media (min-width: 1025px) {
+
+  .boneco {
+    display: inline;
+    text-align: center;
+  }
+
+  .output-image {
+    width: 14rem;
+  }
+
+  .section-output-in {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-input {
+    text-align: left;
+  }
+
+  .input-texto {
+    width: 700px;
+    height: 400px;
+    margin-left: 4rem;
+  }
+
+  .container-main {
+    display: flex;
+  }
+
+  .container-information {
+    margin-left: 4rem;
+  }
+
+  .encrypt, .decrypt {
+    margin: 1rem;
+    height: 3rem;
+    width: 16rem;
+    border-radius: 1rem;
+    font-weight: 100px;
+  }
+}
