@@ -23,6 +23,7 @@ body {
     text-align: left;
     display: flex;
     align-items: center;
+    gap: 0.3rem;
     animation-duration: 3s;
     animation-name: slip;
     /*width: 2rem;
@@ -30,6 +31,7 @@ body {
 }
 /* Estilizando o logotipo da Alura*/
 .logo-alura {
+    margin-top: 1rem;
     margin-left: 1rem;
     font-size: 4rem;
     color: black;
@@ -198,6 +200,7 @@ que em seguida será afetada pelo JavaScript e aparecerá a mensagem de saída e
 
 /* Estilizando o container onde estão a div com o boneco a div com a mensagem de saída  */
 .section-output-in {
+    align-items: center;
     margin: 2rem;
     padding: 1rem;
     background: #FFFFFF;
@@ -246,6 +249,38 @@ que em seguida será afetada pelo JavaScript e aparecerá a mensagem de saída e
     font-style: normal;
     font-size: 1.6rem;
     */
+}
+
+.output-saida {
+    color: #0A3871;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+    resize: none;
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: bold;
+    border: none;
+}
+
+.btn-copiar{
+    margin: 0;
+    height: 4rem;
+    width: 20rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 1px solid #ffffff;
+    background: linear-gradient(to top, #D8DFE8 50%, #0A3871 50%);
+    background-position: top bottom;
+    transition: all 300ms ease-out;
+    background-size: 200% 200%;
+    color: #ffffff;
+}    
+
+.btn-copiar:hover {
+    background-position: left bottom;
+    color: #0A3871;
 }
 /* Estilizando o texto da mensagem de saída <p> */
 /*
