@@ -1,6 +1,6 @@
 const encryptButton = document.getElementById('encrypt-button')
 const decryptButton = document.getElementById('decrypt-button')
-
+/*
 encryptButton.onclick = () => {
   const inputText = document.getElementById('input-text').value
   const output = document.getElementById('output')
@@ -31,10 +31,9 @@ encryptButton.onclick = () => {
   output.style.justifyContent = 'start'
 
   outputText.innerHTML = arrayListEncrypt.join('')
-
-  output.innerHTML = '<textarea readonly id="output-text">' + outputText.innerHTML + 
+  output.innerHTML = '<textarea readonly id="output-text" class="section-output-in">' + outputText.innerHTML + 
   '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
-  
+ 
 }
 
 decryptButton.onclick = () => {
@@ -56,13 +55,53 @@ decryptButton.onclick = () => {
 
   outputAreaText.innerHTML = decrypt
 
-  output.innerHTML = '<textarea readonly id="output-text">' + outputAreaText.innerHTML + 
-    '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
-
 }
 
 function copiar() {
-    var textoCop = document.getElementById('input-texto');
+    var textoCop = document.getElementById('output-text');
+  
+    textoCop.select();
+    document.execCommand('copy');
+    alert("Texto copiado.");
+}*/
+
+var textInput = document.getElementById("input-text");
+var outInput = document.getElementById("output");
+
+
+encryptButton.onclick = () =>{
+
+  var texto = textInput.value;
+
+  var resultCripto = texto.replace(/e/g, "enter")
+  .replace(/i/g, "imes")
+  .replace(/a/g, "ai")
+  .replace(/o/g, "ober")
+  .replace(/u/g, "ufat")
+
+  
+  document.getElementById('output').innerHTML = '<textarea readonly id="output-text">'
+   + resultCripto + '</textarea>' + 
+   '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+}
+
+decryptButton.onclick = () =>{
+
+    var texto = textInput.value;
+
+    var resultDescripto = texto.replace(/enter/g, "e")
+    .replace(/imes/g, "i")
+    .replace(/ai/g, "a")
+    .replace(/ober/g, "o")
+    .replace(/ufat/g, "u");
+  
+    document.getElementById('output').innerHTML = '<textarea readonly id="output-text">'
+     + resultDescripto + '</textarea>' + 
+     '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+}
+
+function copiar() {
+    var textoCop = document.getElementById('output-text');
   
     textoCop.select();
     document.execCommand('copy');
