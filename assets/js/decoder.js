@@ -9,26 +9,46 @@ var criptografado = false
 encryptButton.onclick = () =>{
 
   var texto = textInput.value;
+  const arrayListText = texto.split('')
+  const arrayListEncrypt = []
 
-  if (texto == texto.toLowerCase() && !acento(texto)) {
-    var resultCripto = texto.replace(/e/g, "enter")
-    .replace(/i/g, "imes")
-    .replace(/a/g, "ai")
-    .replace(/o/g, "ober")
-    .replace(/u/g, "ufat")    
+  var resultCripto;
 
-    document.getElementById('output').innerHTML = '<textarea readonly id="output-text" class="output-saida">'
-    + resultCripto + '</textarea>' + 
-    '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
-    hideImage.style.display = 'none'
-    hideTitle.style.display = 'none'
-    output.style.justifyContent = 'start'
-
-    criptografado = true;
-
-  } else {
-    alert("Somente letras minúsculas e sem acento");
+  if (texto == texto.toLowerCase()){
+  for (let i = 0; i < arrayListText.length; i++) {
+    if(!acento(arrayListText[i])){
+      if (arrayListText[i] === 'a') {
+        arrayListEncrypt.push('ai')
+      } else if (arrayListText[i] === 'e') {
+        arrayListEncrypt.push('enter')
+      } else if (arrayListText[i] === 'i') {
+        arrayListEncrypt.push('imes')
+      } else if (arrayListText[i] === 'o') {
+        arrayListEncrypt.push('ober')
+      } else if (arrayListText[i] === 'u') {
+        arrayListEncrypt.push('ufat')
+      } else {
+        arrayListEncrypt.push(arrayListText[i])
+      }
+    }else{
+      alert("Somente letras minúsculas e sem acento!\nRemova os caracteres acentuados.");
+    }
+  } 
+  criptografado = true;
+    }else {
+      alert("Somente letras minúsculas e sem acento!\nRemova os caracteres maiúsculos.");
   }
+
+resultCripto = arrayListEncrypt.join('');
+
+output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
+'<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+
+hideImage.style.display = 'none'
+hideTitle.style.display = 'none'
+output.style.justifyContent = 'start'
+
+
 
 }
 
@@ -42,9 +62,9 @@ decryptButton.onclick = () =>{
     .replace(/ober/g, "o")
     .replace(/ufat/g, "u");
   
-    document.getElementById('output').innerHTML = '<textarea readonly id="output-text" class="output-saida">'
-     + resultDescripto + '</textarea>' + 
-     '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+    output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultDescripto + 
+    '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+
      hideImage.style.display = 'none'
      hideTitle.style.display = 'none'
      output.style.justifyContent = 'start'
