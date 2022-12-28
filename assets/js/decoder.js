@@ -30,23 +30,28 @@ encryptButton.onclick = () =>{
       } else {
         arrayListEncrypt.push(arrayListText[i])
       }
+      criptografado = true;
     }else{
       alert("Somente letras minúsculas e sem acento!\nRemova os caracteres acentuados.");
+      limparEntradaInvalida(arrayListText[i]);
+      criptografado = false;
     }
   } 
-  criptografado = true;
-    }else {
+  resultCripto = arrayListEncrypt.join('');
+
+  output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
+  '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+  
+  hideImage.style.display = 'none'
+  hideTitle.style.display = 'none'
+  output.style.justifyContent = 'start'
+} else {
       alert("Somente letras minúsculas e sem acento!\nRemova os caracteres maiúsculos.");
+      limparEntradaInvalida(texto);
+      criptografado = false;
   }
 
-resultCripto = arrayListEncrypt.join('');
 
-output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
-'<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
-
-hideImage.style.display = 'none'
-hideTitle.style.display = 'none'
-output.style.justifyContent = 'start'
 
 
 
@@ -55,7 +60,7 @@ output.style.justifyContent = 'start'
 decryptButton.onclick = () =>{
 
     var texto = textInput.value;
-    if (texto == texto.toLowerCase() && !acento(texto) && criptografado) {
+    if (criptografado == true) {
     var resultDescripto = texto.replace(/enter/g, "e")
     .replace(/imes/g, "i")
     .replace(/ai/g, "a")
@@ -68,6 +73,8 @@ decryptButton.onclick = () =>{
      hideImage.style.display = 'none'
      hideTitle.style.display = 'none'
      output.style.justifyContent = 'start'
+    }else{
+      exit();
     }
   }
 
@@ -87,5 +94,11 @@ function acento(texto){
   texto.toLowerCase() == 'â' || texto.toLowerCase() == 'ê' || texto.toLowerCase() == 'î' ||
   texto.toLowerCase() == 'ô' || texto.toLowerCase() == 'û'){
     return true;
+  }
+}
+
+function limparEntradaInvalida(texto){
+  if (acento(texto.value) || texto.toUpperCase()){
+       texto = '';
   }
 }
