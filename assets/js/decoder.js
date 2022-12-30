@@ -5,7 +5,7 @@ const hideImage = document.getElementById('hide-image')
 const hideTitle = document.getElementById('hide-title')
 var textInput = document.getElementById("input-text");
 var criptografado = false;
-var acentuada = false;
+var acentuadaMaiuscula = false;
 
 encryptButton.onclick = () =>{
 
@@ -15,32 +15,35 @@ encryptButton.onclick = () =>{
 
   var resultCripto;
 
-  if (texto == texto.toLowerCase() && !acento(texto)){
-    for (let i = 0; i < arrayListText.length; i++) {
-      if(acento(arrayListText[i])){
-        alerta();
-        criptografado = false;
-        acentuada = true;
-      } else{
-          if (arrayListText[i] === 'a') {
-            arrayListEncrypt.push('ai')
-          } else if (arrayListText[i] === 'e') {
-            arrayListEncrypt.push('enter')
-          } else if (arrayListText[i] === 'i') {
-            arrayListEncrypt.push('imes')
-          } else if (arrayListText[i] === 'o') {
-            arrayListEncrypt.push('ober')
-          } else if (arrayListText[i] === 'u') {
-            arrayListEncrypt.push('ufat')
-          } else {
-            arrayListEncrypt.push(arrayListText[i])
-          }
-          criptografado = true;
-        }
-    } 
+  if (texto === texto.toLowerCase() && !acento(texto)){
+  for (let i = 0; i < arrayListText.length; i++) {
+    if(!acento(arrayListText[i])){
+      if (arrayListText[i] === 'a') {
+        arrayListEncrypt.push('ai')
+      } else if (arrayListText[i] === 'e') {
+        arrayListEncrypt.push('enter')
+      } else if (arrayListText[i] === 'i') {
+        arrayListEncrypt.push('imes')
+      } else if (arrayListText[i] === 'o') {
+        arrayListEncrypt.push('ober')
+      } else if (arrayListText[i] === 'u') {
+        arrayListEncrypt.push('ufat')
+      } else {
+        arrayListEncrypt.push(arrayListText[i])
+      }
+      criptografado = true;
+    }else{
+      alerta();
+      acentuadaMaiuscula = true;
+      criptografado = false;
+    }
+  } 
+
+  if(!acentuadaMaiuscula && criptografado){
+    resultCripto = arrayListEncrypt.join('');
+  } else{
+    alerta()
   }
-      
-  resultCripto = arrayListEncrypt.join('');
 
   output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
   '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
