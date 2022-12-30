@@ -4,7 +4,8 @@ const output = document.getElementById('output')
 const hideImage = document.getElementById('hide-image')
 const hideTitle = document.getElementById('hide-title')
 var textInput = document.getElementById("input-text");
-var criptografado = false
+var criptografado = false;
+var acentuada = false;
 
 encryptButton.onclick = () =>{
 
@@ -14,29 +15,31 @@ encryptButton.onclick = () =>{
 
   var resultCripto;
 
-  if (texto == texto.toLowerCase()){
-  for (let i = 0; i < arrayListText.length; i++) {
-    if(!acento(arrayListText[i])){
-      if (arrayListText[i] === 'a') {
-        arrayListEncrypt.push('ai')
-      } else if (arrayListText[i] === 'e') {
-        arrayListEncrypt.push('enter')
-      } else if (arrayListText[i] === 'i') {
-        arrayListEncrypt.push('imes')
-      } else if (arrayListText[i] === 'o') {
-        arrayListEncrypt.push('ober')
-      } else if (arrayListText[i] === 'u') {
-        arrayListEncrypt.push('ufat')
-      } else {
-        arrayListEncrypt.push(arrayListText[i])
-      }
-      criptografado = true;
-    }else{
-      alert("Somente letras minúsculas e sem acento!\nRemova os caracteres acentuados.");
-      limparEntradaInvalida(arrayListText[i]);
-      criptografado = false;
-    }
-  } 
+  if (texto == texto.toLowerCase() && !acento(texto)){
+    for (let i = 0; i < arrayListText.length; i++) {
+      if(acento(arrayListText[i])){
+        alerta();
+        criptografado = false;
+        acentuada = true;
+      } else{
+          if (arrayListText[i] === 'a') {
+            arrayListEncrypt.push('ai')
+          } else if (arrayListText[i] === 'e') {
+            arrayListEncrypt.push('enter')
+          } else if (arrayListText[i] === 'i') {
+            arrayListEncrypt.push('imes')
+          } else if (arrayListText[i] === 'o') {
+            arrayListEncrypt.push('ober')
+          } else if (arrayListText[i] === 'u') {
+            arrayListEncrypt.push('ufat')
+          } else {
+            arrayListEncrypt.push(arrayListText[i])
+          }
+          criptografado = true;
+        }
+    } 
+  }
+      
   resultCripto = arrayListEncrypt.join('');
 
   output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
@@ -46,8 +49,7 @@ encryptButton.onclick = () =>{
   hideTitle.style.display = 'none'
   output.style.justifyContent = 'start'
 } else {
-      alert("Somente letras minúsculas e sem acento!\nRemova os caracteres maiúsculos.");
-      limparEntradaInvalida(texto);
+      alerta();
       criptografado = false;
   }
 
@@ -59,8 +61,9 @@ encryptButton.onclick = () =>{
 
 decryptButton.onclick = () =>{
 
+  if (criptografado == true) {
     var texto = textInput.value;
-    if (criptografado == true) {
+    
     var resultDescripto = texto.replace(/enter/g, "e")
     .replace(/imes/g, "i")
     .replace(/ai/g, "a")
@@ -97,8 +100,6 @@ function acento(texto){
   }
 }
 
-function limparEntradaInvalida(texto){
-  if (acento(texto.value) || texto.toUpperCase()){
-       texto = '';
-  }
+function alerta(){
+  alert("Somente letras minúsculas e sem acento!\nRemova os caracteres maiúsculos e acentuados.");
 }
