@@ -33,28 +33,27 @@ encryptButton.onclick = () =>{
       }
       criptografado = true;
     }else{
-      alerta();
       acentuadaMaiuscula = true;
       criptografado = false;
     }
-  } 
+  }
+} else{
+  alerta();
+}
 
   if(!acentuadaMaiuscula && criptografado){
     resultCripto = arrayListEncrypt.join('');
-  } else{
-    alerta()
+
+    output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
+    '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+    
+    hideImage.style.display = 'none'
+    hideTitle.style.display = 'none'
+    output.style.justifyContent = 'start'
   }
 
-  output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
-  '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
-  
-  hideImage.style.display = 'none'
-  hideTitle.style.display = 'none'
-  output.style.justifyContent = 'start'
-} else {
-      alerta();
-      criptografado = false;
-  }
+
+
 
 
 
