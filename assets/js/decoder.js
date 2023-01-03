@@ -15,9 +15,9 @@ encryptButton.onclick = () =>{
 
   var resultCripto;
 //se o texto estiver em minúsculo e sem acento, prossegue com o for
-  if (texto === texto.toLowerCase() && !acento(texto)){
+  
     for (let i = 0; i < arrayListText.length; i++) {
-      if(!acento(arrayListText[i])){
+      if(!acento(arrayListText[i]) && minuscula(arrayListText[i])){
         if (arrayListText[i] === 'a') {
           arrayListEncrypt.push('ai')
         } else if (arrayListText[i] === 'e') {
@@ -38,53 +38,43 @@ encryptButton.onclick = () =>{
         alerta();
       }
     }
-  }else{
-    alerta();
-  }
 
-  if(!acentuadaMaiuscula && criptografado){
-    resultCripto = arrayListEncrypt.join('');
+    if(!acentuadaMaiuscula && criptografado){
+      resultCripto = arrayListEncrypt.join('');
 
-    output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
-    '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
-    
-    hideImage.style.display = 'none'
-    hideTitle.style.display = 'none'
-    output.style.justifyContent = 'start'
-  }
-
-
-
-
-
-
-
+  
+      output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultCripto + '</textarea>' + 
+      '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+      
+      hideImage.style.display = 'none'
+      hideTitle.style.display = 'none'
+      output.style.justifyContent = 'start'
+    }
 
 }
 
 decryptButton.onclick = () =>{
-
-  if (criptografado == true) {
-    var texto = textInput.value;
-    
+  var texto = textInput.value;
+  if (criptografado && texto.toLowerCase()) {
     var resultDescripto = texto.replace(/enter/g, "e")
     .replace(/imes/g, "i")
     .replace(/ai/g, "a")
     .replace(/ober/g, "o")
     .replace(/ufat/g, "u");
-  
-    output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultDescripto + 
-    '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
 
-     hideImage.style.display = 'none'
-     hideTitle.style.display = 'none'
-     output.style.justifyContent = 'start'
-    }else{
-      alerta();
+      output.innerHTML = '<textarea readonly id="output-text" class="output-saida">' + resultDescripto + 
+      '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
 
-    }
+      hideImage.style.display = 'none'
+      hideTitle.style.display = 'none'
+      output.style.justifyContent = 'start'
+
+  }else{
+    window.location.reload(true);
   }
+}
 
+// função que gera o botão de copiar e emite um alerta quando o texto é copiado, em seguida recarrega a página
 function copiar() {
     var textoCop = document.getElementById('output-text');
   
@@ -94,6 +84,14 @@ function copiar() {
     window.location.reload(true); // esse comando recarrega a url
 }
 
+// função retorna verdadeiro se o caracter passado for exatamente igual a ele mesmo em minúsculo
+function minuscula(texto){
+  if(texto === texto.toLowerCase()){
+    return true;
+  }
+}
+
+// função vai retornar verdadeiro se as vogais forem acentuadas
 function acento(texto){
   if(texto.toLowerCase() == 'á' || texto.toLowerCase() == 'é' || texto.toLowerCase() == 'í' ||
   texto.toLowerCase() == 'ó' || texto.toLowerCase() == 'ú' || texto.toLowerCase() == 'à' || 
@@ -105,6 +103,7 @@ function acento(texto){
   }
 }
 
+// função gera o alerta de letras maiúsculas e acentuadas, na sequência recarrega a página para reiniciar o preenchimento
 function alerta(){
   alert("Somente letras minúsculas e sem acento!");
   window.location.reload(true); // esse comando recarrega a url
