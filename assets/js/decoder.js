@@ -14,32 +14,33 @@ encryptButton.onclick = () =>{
   const arrayListEncrypt = []
 
   var resultCripto;
-
+//se o texto estiver em minúsculo e sem acento, prossegue com o for
   if (texto === texto.toLowerCase() && !acento(texto)){
-  for (let i = 0; i < arrayListText.length; i++) {
-    if(!acento(arrayListText[i])){
-      if (arrayListText[i] === 'a') {
-        arrayListEncrypt.push('ai')
-      } else if (arrayListText[i] === 'e') {
-        arrayListEncrypt.push('enter')
-      } else if (arrayListText[i] === 'i') {
-        arrayListEncrypt.push('imes')
-      } else if (arrayListText[i] === 'o') {
-        arrayListEncrypt.push('ober')
-      } else if (arrayListText[i] === 'u') {
-        arrayListEncrypt.push('ufat')
-      } else {
-        arrayListEncrypt.push(arrayListText[i])
+    for (let i = 0; i < arrayListText.length; i++) {
+      if(!acento(arrayListText[i])){
+        if (arrayListText[i] === 'a') {
+          arrayListEncrypt.push('ai')
+        } else if (arrayListText[i] === 'e') {
+          arrayListEncrypt.push('enter')
+        } else if (arrayListText[i] === 'i') {
+          arrayListEncrypt.push('imes')
+        } else if (arrayListText[i] === 'o') {
+          arrayListEncrypt.push('ober')
+        } else if (arrayListText[i] === 'u') {
+          arrayListEncrypt.push('ufat')
+        } else {
+          arrayListEncrypt.push(arrayListText[i])
+        }
+        criptografado = true;
+      }else{
+        acentuadaMaiuscula = true;
+        criptografado = false;
+        alerta();
       }
-      criptografado = true;
-    }else{
-      acentuadaMaiuscula = true;
-      criptografado = false;
     }
+  }else{
+    alerta();
   }
-} else{
-  alerta();
-}
 
   if(!acentuadaMaiuscula && criptografado){
     resultCripto = arrayListEncrypt.join('');
@@ -79,7 +80,8 @@ decryptButton.onclick = () =>{
      hideTitle.style.display = 'none'
      output.style.justifyContent = 'start'
     }else{
-      exit();
+      alerta();
+
     }
   }
 
@@ -89,6 +91,7 @@ function copiar() {
     textoCop.select();
     document.execCommand('copy');
     alert("Texto copiado.");
+    window.location.reload(true); // esse comando recarrega a url
 }
 
 function acento(texto){
@@ -103,5 +106,6 @@ function acento(texto){
 }
 
 function alerta(){
-  alert("Somente letras minúsculas e sem acento!\nRemova os caracteres maiúsculos e acentuados.");
+  alert("Somente letras minúsculas e sem acento!");
+  window.location.reload(true); // esse comando recarrega a url
 }
