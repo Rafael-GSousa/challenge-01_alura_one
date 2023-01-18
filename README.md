@@ -3,5 +3,5 @@ First challenge ONE (Oracle Next Education)
 
 
 <p align="center">
-  <img src="assets/img/decoder.gif">
+  <img width="100%" src="assets/img/decoder.gif">
 </p>
